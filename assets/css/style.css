@@ -1,0 +1,593 @@
+/* REST CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ chi tiết đến tổng quan */
+/* 
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông ....) */
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third{
+    width: 33.3333333%;
+}
+.col-second{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.text-center{
+    text-align: center !important;
+}
+.text-while{
+    color: #fff !important;
+}
+.text-opacity{
+    opacity: 0.6;
+}
+.magin15{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.magin-top16{
+    margin-top: 16px !important;
+    
+}
+.magin-top8{
+    margin-top: 8px !important;
+}
+.clear{
+    clear: both !important;
+}
+.border{
+    border: 1px solid #ccc!important;
+}
+
+.float-right{
+    float: right;
+}
+
+
+#main{
+
+}
+
+#header{
+    height: 46.5px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+#header .mobile-menu-search{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .mobile-menu{
+    padding: 0 24px;
+}
+#header .mobile-menu-search,
+#header .search-btn{
+    float: right;
+    display: inline-block;
+
+}
+#header .mobile-menu-search:hover{
+    background-color: #ccc;
+}
+#header .search-btn:hover{
+    background-color: #f44336;
+}
+
+#header .ti-menu:hover{
+    color: #000;
+}
+#header .ti-menu,
+#header .ti-search{
+    font-size: 18px;
+    color: #fff;
+    line-height: 46.5px;
+    /* padding: 0 24px; */
+    cursor: pointer;
+    
+}
+#nav{
+    display: inline-block;
+}
+#nav, #subnav{
+    list-style: none;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+#nav li:hover #subnav{
+    display: block;
+}
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 46.5px; 
+    padding: 0 24px;
+    display: block;
+}
+/* #nav li:hover a{
+    color: #000!important;
+    background-color: #ccc!important;  --> ảnh hưởng toàn bộ
+} */
+#nav > li:hover > a{
+    color: #000!important;
+    background-color: #ccc!important; /* ảnh hưởng thẻ cấp 1 */
+}
+#nav #subnav li:hover{
+    color: #000!important;
+    background-color: #ccc!important;
+}
+#nav #subnav{
+    min-width: 160px;
+    display: none;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    box-shadow: 0 0 10px rgb(0,0,0,0.3);
+}
+#nav #subnav a{
+    color: #000;
+    padding: 0 12px;
+    line-height: 38.5px;
+}
+#nav .ti-angle-down{
+    font-size: 12px;
+    color: #fff;
+}
+#slider{
+    position: relative;
+    margin-top: 46.5px;
+    padding-top: 50%;
+    /*  .  nhảy 1 lần
+        .. nhảy 2 lần assets đứng ngag hàng với img nên có thể truy cập được
+     */
+    background: url(../img/slider/slider1.jpg) top center /cover no-repeat;
+
+}
+
+#slider .text-content{
+position: absolute;
+color: #fff;
+bottom: 47px;
+/* left: 50%;
+transform: translateX(-50%); */
+/* left: 0;
+right: 0; */
+width: 100%;
+text-align: center;
+}
+.text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+.text-des{
+    font-size: 14px;
+    margin-top: 25px;
+    text-shadow: 0 0 1px;
+}
+.text-font-size{
+    font-size: 15px;
+}
+
+/* #content{
+    margin: 0 10.5px;
+} */
+
+#content .content-section{
+    margin: 0 10.5px;
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* padding: 64px 16px */
+    
+}
+.tour-section /*  .tour-content-section */{ 
+    /* padding: 64px 16px; */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000;
+    padding: 64px 16px;
+    
+}
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 10px 0;
+}
+#content .section-subheading{
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+}
+#content .about-text{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .members-list .member-item{
+
+    text-align: center;;
+    /* or display: inline-block để kéo sang trái */
+}
+
+#content .members-list .member-name{
+    font-size: 15px;
+    
+}
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+/* Tour section */
+
+.tour-section{
+    /* display: inline-block; */
+   
+}
+.tickets-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+.tickets-list .sold-out{
+    background: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickets-list .quantily{
+    font-size: 15px;
+    width: 24px;
+    height: 24px;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    line-height: 24px;
+    padding: 0 8px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+.places-list{
+/* margin: 32px -8px 0; */
+/* padding-bottom: 48px; */
+margin-top: 32px;
+margin-bottom: 48px;
+}
+
+.place-img{
+width: 100%;
+display: block;
+}
+.place-img:hover{
+    opacity: 0.9;
+}
+#buy-tickets:hover,
+/* .btn:hover, */
+.place-img:hover{
+    opacity: 0.5;
+}
+
+.place-body{
+    background-color: white;
+    display: inline-block;
+    padding: 0 16px;
+    /* width: 100%; */
+}
+
+/* 
+.places-item .place-time {
+    margin: 15px 0;
+   
+} */
+
+.places-item .place-desc {
+    line-height: 1.6;
+}
+
+.btn:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.btn{
+    border-style: none;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    border: none;
+    /* thê vô để body tự margin-bottom 15px*/
+    /* 
+    margin-top: 0px;
+    display: inline-block; vì đã margin ở thẻ place-decs nên thẻ buy k cần */
+}
+
+
+
+#footer{
+
+}
+
+
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgb(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open{
+    display: flex;
+}
+
+.modal-body {
+    padding: 0.15px 16px;
+}
+
+.modal .modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 5.4px;
+}
+
+.modal-quantity{
+    margin-bottom: 12px;
+}
+
+.modal-container {
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100% - 32px);
+    animation: modalLogIn ease 0.5s; /*hiệu ứng cđ chậm 0.5s*/
+}
+
+.modal-icon{
+    margin-right: 16px;
+}
+.modal-container .ti-close{
+    position: absolute;
+    right: 0;
+    top:0;
+    color:#fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 14px;
+}
+.modal-closed{
+    font-size: 15px;
+}
+.modal-footer .closed{
+    color: #fff
+}
+.ti-user,
+.ti-shopping-cart-full {
+    display: block;
+    font-weight: 545;
+}
+.modal-input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    /* margin-bottom: 24px; */
+}
+
+#buy-tickets {
+    margin: 16px 0;
+    padding: 16px;
+    width: 100%;
+    background-color: #009688;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    text-transform:  uppercase;
+    cursor: pointer;
+}
+
+/* .modal-footer{
+    font-size: 15px;
+    margin: 16px;
+    text-align: right;
+} */
+.modal-body .modal-help{
+    font-size: 15px;
+    margin: 16px;
+    float: right;
+    display: inline-block;
+}
+.modal-body .modal-help a{
+    color: #2196F3;
+}
+.modal-body .modal-closed {
+    font-size: 15px;
+    display: inline-block;
+}
+
+.container-content{
+    padding: 32px 0;   
+}
+
+/* .col-second{
+    float: left;
+    display: inline-block;
+    font-size: 18px;
+} */
+
+.ti-location-pin{
+    display: block;
+}
+.ti-twitter-alt{
+    display: block;
+}
+.ti-email{
+    display: block;
+}
+
+.closed {
+    padding: 11px 20px;
+    margin: 16px 0;
+    display: inline-block;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+}
+
+/* CONTACT FORM */
+.contact-content{
+    padding: 32px 0;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form .form-control {
+    padding: 9px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+/* .contact-form .form-submit-btn{
+    margin: 16px 0;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid;
+    font-size: 15px;
+    float: right;
+} */
+
+.map-content{
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(50%);
+}
+.ti-facebook, 
+.ti-instagram,
+.ti-linux, 
+.ti-pinterest,
+.ti-twitter-alt, 
+.ti-linkedin.row {
+    display: inline-block;
+    font-size: 48px;
+    padding: 8px;
+}
+#footer{
+    padding: 64px 16px;
+    background-color: #F1F1F1 !important;
+    opacity: 0.6;
+    
+}
+/* #footer .icon-footer{
+    text-align: center;
+    font-size: 25px;
+} */
+.ti-facebook:hover,
+.ti-instagram:hover,
+.ti-linux:hover,
+.ti-pinterest:hover,
+.ti-twitter-alt:hover,
+.ti-linkedin:hover{
+    opacity: 0.5;
+}
+.text-footer {
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: center;
+}
+.text-footer a{
+    color: #000;
+}
+.icon-footer i[class*="ti-"] {
+    width: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.icon-footer{
+    text-align: center;
+}
+
+@keyframes modalLogIn{
+    from{
+        opacity: 0;
+        transform: translateY(-130px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
